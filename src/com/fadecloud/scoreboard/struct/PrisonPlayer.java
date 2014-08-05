@@ -12,7 +12,6 @@ import com.fadecloud.scoreboard.utils.NumberUtils;
 import com.fadecloud.scoreboard.utils.RankupUtils;
 import java.util.UUID;
 import lombok.Getter;
-import net.minecraft.server.v1_7_R4.MinecraftServer;
 import org.arkhamnetwork.rankup.struct.Rank;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -108,16 +107,5 @@ public class PrisonPlayer {
             } else {
                   currentScoreboard.updateLine(3, ChatColor.WHITE + NumberUtils.formatMoney(cost) + " ", 3);
             }
-
-            if (!currentScoreboard.hasLine(2)) {
-                  currentScoreboard.addLine(2, ChatColor.AQUA + "" + ChatColor.BOLD + "Ticks", 2);
-            }
-
-            if (!currentScoreboard.hasLine(1)) {
-                  currentScoreboard.addLine(1, ChatColor.WHITE + String.valueOf(Math.min(Math.round(MinecraftServer.getServer().recentTps[0] * 100.00) / 100.00, 20.00)) + ChatColor.BLUE + " ", 1);
-            } else {
-                  currentScoreboard.updateLine(1, ChatColor.WHITE + String.valueOf(Math.min(Math.round(MinecraftServer.getServer().recentTps[0] * 100.00) / 100.00, 20.00)) + ChatColor.BLUE + " ", 1);
-            }
-
       }
 }
