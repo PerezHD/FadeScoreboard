@@ -1,0 +1,6 @@
+name: FadeScoreboard
+authors: [harry5573]
+version: 1.0-SNAPSHOT
+description: Scoreboard plugin for fadecloud.
+main: com.fadecloud.scoreboard.FadeScoreboard
+depend: [ArkhamRankup, Vault, FadeDropParty]
